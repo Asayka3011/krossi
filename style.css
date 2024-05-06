@@ -1,0 +1,116 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    margin: 50px;
+    font-family: sans-serif;
+}
+
+img {
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+li,
+#sneaker {
+    list-style: none;
+    padding: 15px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+h2 {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 6px 18px;
+}
+
+#sneaker {
+    display: none;
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: transform .4s;
+}
+
+.popup.active {
+    transform: scale(1);
+}
+
+.popup__wrapp {
+    position: relative;
+    padding: 50px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.popup__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: transparent;
+    width: 26px;
+    height: 26px;
+    padding: 0;
+}
+
+.popup__close::before,
+.popup__close::after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background: #000;
+    border-radius: 2px;
+}
+
+.popup__close::before {
+    transform: rotate(-45deg);
+}
+
+.popup__close::after {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 600px) {
+    body {
+        zoom: 0.6;
+    } 
+}
